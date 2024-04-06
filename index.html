@@ -15,7 +15,7 @@
 
 <center><h1>Information Center</h1></center>
 
-<div class="container" id="wrapper">
+<div class="container" id="wrapper" style="margin-top: 20px;">
   <div class="container-fluid" id="current-weather">
     <div class="row">
       
@@ -66,8 +66,8 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
-          <p>Due to weather api restrictions, data can only be shown via HTTP request.</p>
-          <p>Sorry for the inconvenience.</p>
+          <p></p>
+          <p></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -157,6 +157,76 @@
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+<!--
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=QugTbpmd"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/jquery/2.2.1/jquery.min.js"></script>
+
+<script>
+
+    function voiceStartCallback() {
+        console.log("Voice started");
+    }
+    
+    function voiceEndCallback() {
+        console.log("Voice ended");
+    }
+    
+    var parameters = {
+        onstart: voiceStartCallback,
+        onend: voiceEndCallback,
+        rate: 0.95
+    }
+    
+</script>
+
+
+<script type="text/javascript">
+
+/*
+
+responsiveVoice.speak("Hello, this is a test using callbacks","UK English Female", parameters);
+
+responsiveVoice.speak("hello world", "UK English Male", {pitch: 2});
+
+responsiveVoice.speak("hello world", "UK English Male", {rate: 1.5});
+
+responsiveVoice.speak("hello world", "UK English Male", {volume: 1});
+
+*/
+
+</script>    
+
+
+<script type="text/javascript">
+
+// var text = document.getElementById(secondElementChild).innerHTML;
+   
+// var text = "Equals";
+
+// responsiveVoice.speak(text,'UK English Female', parameters);  
+  
+</script> 
+
+
+<style>
+footer h4 {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 10px;
+   background-color: indigo;
+   color: white;
+   text-align: center;
+}
+</style>
+
+<footer><center><a href="https://responsivevoice.org" title="ResponsiveVoice"><h4>Powered By ResponsiveVoice Text-To-Speech For Non-commercial personal or non-profit project</h4></a></center></footer>
 
 </body>
 </html>

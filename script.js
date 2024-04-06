@@ -50,11 +50,11 @@ function getClientPosition(){
 function getWeatherData(latitude, longitude){
   $.ajax({
     type: "GET",
-    url: "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?APPID=9b4bbf30228eb8528d36e79d05da1fac&lat=" + latitude + "&lon=" + longitude + "&units=metric&cnt=5",
+    url: "https://api.openweathermap.org/data/2.5/forecast/daily?APPID=9b4bbf30228eb8528d36e79d05da1fac&lat=" + latitude + "&lon=" + longitude + "&units=metric&cnt=5",
     cache: true,
-    headers: {
-      "Access-Control-Allow-Headers": "x-requested-with"
-    },
+    // headers: {
+      // "Access-Control-Allow-Headers": "x-requested-with"
+    // },
     success: function(forecast){
       globalForecast = forecast;
       updateForecast(forecast);
@@ -100,6 +100,136 @@ function updateForecast(forecast){
     $("#forecast-day-" + i + "-ht").text(Math.round(day.temp.max));
     $("#forecast-day-" + i + "-lt").text(Math.round(day.temp.min));
   }
+
+
+// testi="Equals,,,,"+textvi+",,,,I Repeat.,,,,"+textvi;
+//    console.log(testi);
+     // responsiveVoice.speak(textvi,'UK English Female', parameters);  
+       // responsiveVoice.speak("    I Repeat.    ",'UK English Female', parameters);  
+//       responsiveVoice.speak( testi.toString(), 'UK English Female', parameters);
+
+  responsiveVoice.speak("Hi, Welcome to the Information Center.", 'UK English Female', parameters);
+
+  console.log(new Date().toLocaleTimeString());
+
+
+  setTimeout(function (){
+  
+  // Something you want delayed.
+
+    responsiveVoice.speak("Time now is,,,,. : "+(new Date().toLocaleTimeString()), 'UK English Female', parameters);    
+            
+}, 4000); // How long you want the delay to be, measured in milliseconds.
+
+
+  console.log($('#localDate').html());
+
+
+  setTimeout(function (){
+  
+  // Something you want delayed.
+
+    responsiveVoice.speak("Day today is,,,,. : "+$('#localDate').html(), 'UK English Female', parameters);    
+            
+}, 10000); // How long you want the delay to be, measured in milliseconds.
+
+
+
+
+
+  console.log($('#cityName').html());
+  console.log($('#cityCode').html());
+
+  console.log($('#mainTemperature').html());
+  console.log($('#tempDescription').html());
+
+  console.log($('#mainTempHot').html());
+  console.log($('#mainTempLow').html());
+  
+  console.log($('#humidity').html());
+  console.log($('#wind').html());
+
+  setTimeout(function (){
+  
+  // Something you want delayed.
+
+    responsiveVoice.speak("Temperature in "+$('#cityName').html()+","+$('#cityCode').html()+" is. "+$('#mainTemperature').html()+" Degree Celcius."+" Its description is. "+$('#tempDescription').html()+". Today's expected minimum temperature is "+$('#mainTempLow').html()+" degree celcius. Expected maximum temperature is "+$('#mainTempHot').html()+" degree celcius. Humidity is "+$('#humidity').html()+" percent. Wind speed is "+$('#wind').html()+" meter per second.", 'UK English Female', parameters);    
+            
+}, 16000); // How long you want the delay to be, measured in milliseconds.
+
+
+
+var days = {
+   'Mon': 'Monday',
+   'Tue': 'Tuesday',
+   'Wed': 'Wednesday',
+   'Thu': 'Thursday',
+   'Fri': 'Friday',
+   'Sat': 'Saturday',
+   'Sun': 'Sunday'
+}
+
+// days[date]
+
+  console.log(days[$('#forecast-day-1-name').html()]);
+  console.log($('#forecast-day-1-main').html());
+  console.log($('#forecast-day-1-ht').html());
+  console.log($('#forecast-day-1-lt').html());
+
+  console.log(days[$('#forecast-day-2-name').html()]);
+  console.log($('#forecast-day-2-main').html());
+  console.log($('#forecast-day-2-ht').html());
+  console.log($('#forecast-day-2-lt').html());
+
+  console.log(days[$('#forecast-day-3-name').html()]);
+  console.log($('#forecast-day-3-main').html());
+  console.log($('#forecast-day-3-ht').html());
+  console.log($('#forecast-day-3-lt').html());
+
+  console.log(days[$('#forecast-day-4-name').html()]);
+  console.log($('#forecast-day-4-main').html());
+  console.log($('#forecast-day-4-ht').html());
+  console.log($('#forecast-day-4-lt').html());
+
+
+
+  setTimeout(function (){
+  
+  // Something you want delayed.
+
+    responsiveVoice.speak("Forecast Temperature for "+days[$('#forecast-day-1-name').html()]+" is "+$('#forecast-day-1-main').html()+" degree celcius. Expected high is "+$('#forecast-day-1-ht').html()+" degree celcius. Expected low is "+$('#forecast-day-1-lt').html()+" degree celcius.", 'UK English Female', parameters);    
+            
+}, 36000); // How long you want the delay to be, measured in milliseconds.
+
+
+  setTimeout(function (){
+  
+  // Something you want delayed.
+
+    responsiveVoice.speak("Forecast Temperature for "+days[$('#forecast-day-2-name').html()]+" is "+$('#forecast-day-2-main').html()+" degree celcius. Expected high is "+$('#forecast-day-2-ht').html()+" degree celcius. Expected low is "+$('#forecast-day-2-lt').html()+" degree celcius.", 'UK English Female', parameters);    
+            
+}, 48000); // How long you want the delay to be, measured in milliseconds.
+
+
+
+  setTimeout(function (){
+  
+  // Something you want delayed.
+
+    responsiveVoice.speak("Forecast Temperature for "+days[$('#forecast-day-3-name').html()]+" is "+$('#forecast-day-3-main').html()+" degree celcius. Expected high is "+$('#forecast-day-3-ht').html()+" degree celcius. Expected low is "+$('#forecast-day-3-lt').html()+" degree celcius.", 'UK English Female', parameters);    
+            
+}, 60000); // How long you want the delay to be, measured in milliseconds.
+
+
+  setTimeout(function (){
+  
+  // Something you want delayed.
+
+    responsiveVoice.speak("Forecast Temperature for "+days[$('#forecast-day-4-name').html()]+" is "+$('#forecast-day-4-main').html()+" degree celcius. Expected high is "+$('#forecast-day-4-ht').html()+" degree celcius. Expected low is "+$('#forecast-day-4-lt').html()+" degree celcius.", 'UK English Female', parameters);    
+            
+}, 72000); // How long you want the delay to be, measured in milliseconds.
+
+  
 }
 
 

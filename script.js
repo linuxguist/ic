@@ -119,7 +119,7 @@ function updateForecast(forecast){
 
     responsiveVoice.speak("Time now is,,,,. : "+(new Date().toLocaleTimeString()), 'UK English Female', parameters);    
             
-}, 4000); // How long you want the delay to be, measured in milliseconds.
+}, 2000); // How long you want the delay to be, measured in milliseconds.
 
 
   console.log($('#localDate').html());

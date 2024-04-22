@@ -119,7 +119,7 @@ function updateForecast(forecast){
 
     responsiveVoice.speak("Time now is,,,,. : "+(new Date().toLocaleTimeString()), 'UK English Female', parameters);    
             
-}, 2000); // How long you want the delay to be, measured in milliseconds.
+}, 4000); // How long you want the delay to be, measured in milliseconds.
 
 
   console.log($('#localDate').html());
@@ -131,7 +131,7 @@ function updateForecast(forecast){
 
     responsiveVoice.speak("Day today is,,,,. : "+$('#localDate').html(), 'UK English Female', parameters);    
             
-}, 10000); // How long you want the delay to be, measured in milliseconds.
+}, 12000); // How long you want the delay to be, measured in milliseconds.
 
 
 
@@ -414,7 +414,7 @@ var cc = {
 
     responsiveVoice.speak("Temperature in "+$('#cityName').html()+","+cc[$('#cityCode').html()]+" is. "+$('#mainTemperature').html()+" Degree Celcius."+" Its description is. "+$('#tempDescription').html()+". Today's expected minimum temperature is "+$('#mainTempLow').html()+" degree celcius. Expected maximum temperature is "+$('#mainTempHot').html()+" degree celcius. Humidity is "+$('#humidity').html()+" percent. Wind speed is "+$('#wind').html()+" meter per second.", 'UK English Female', parameters);    
             
-}, 16000); // How long you want the delay to be, measured in milliseconds.
+}, 18000); // How long you want the delay to be, measured in milliseconds.
 
 
 
@@ -458,7 +458,7 @@ var days = {
 
     responsiveVoice.speak("Forecast Temperature for "+days[$('#forecast-day-1-name').html()]+" is "+$('#forecast-day-1-main').html()+" degree celcius. Expected high is "+$('#forecast-day-1-ht').html()+" degree celcius. Expected low is "+$('#forecast-day-1-lt').html()+" degree celcius.", 'UK English Female', parameters);    
             
-}, 36000); // How long you want the delay to be, measured in milliseconds.
+}, 38000); // How long you want the delay to be, measured in milliseconds.
 
 
   setTimeout(function (){
@@ -467,7 +467,7 @@ var days = {
 
     responsiveVoice.speak("Forecast Temperature for "+days[$('#forecast-day-2-name').html()]+" is "+$('#forecast-day-2-main').html()+" degree celcius. Expected high is "+$('#forecast-day-2-ht').html()+" degree celcius. Expected low is "+$('#forecast-day-2-lt').html()+" degree celcius.", 'UK English Female', parameters);    
             
-}, 48000); // How long you want the delay to be, measured in milliseconds.
+}, 50000); // How long you want the delay to be, measured in milliseconds.
 
 
 
@@ -477,7 +477,7 @@ var days = {
 
     responsiveVoice.speak("Forecast Temperature for "+days[$('#forecast-day-3-name').html()]+" is "+$('#forecast-day-3-main').html()+" degree celcius. Expected high is "+$('#forecast-day-3-ht').html()+" degree celcius. Expected low is "+$('#forecast-day-3-lt').html()+" degree celcius.", 'UK English Female', parameters);    
             
-}, 60000); // How long you want the delay to be, measured in milliseconds.
+}, 62000); // How long you want the delay to be, measured in milliseconds.
 
 
   setTimeout(function (){
@@ -486,7 +486,7 @@ var days = {
 
     responsiveVoice.speak("Forecast Temperature for "+days[$('#forecast-day-4-name').html()]+" is "+$('#forecast-day-4-main').html()+" degree celcius. Expected high is "+$('#forecast-day-4-ht').html()+" degree celcius. Expected low is "+$('#forecast-day-4-lt').html()+" degree celcius.", 'UK English Female', parameters);    
             
-}, 72000); // How long you want the delay to be, measured in milliseconds.
+}, 74000); // How long you want the delay to be, measured in milliseconds.
 
   
 }
